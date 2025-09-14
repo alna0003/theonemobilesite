@@ -1,0 +1,106 @@
+main {
+  display: grid;
+}
+
+@media (min-width: 750px) {
+  .grid_2-1 {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .grid_1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2em;
+  }
+
+  .grid_5-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+  }
+
+  .grid_2-3 {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 1em;
+  }
+
+  .grid_3-2 {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 1em;
+  }
+
+.grid_1-1-1-1 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 200px; /* alle rækker samme højde */
+  gap: 10px;
+}
+
+.grid_1-1-1-1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* så de beskæres pænt */
+}
+  }
+  .grid_1-1-1 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 10px;
+  }
+
+  /* Hver kolonne skal fylde hele højden og være en flex container */
+  .flex_col {
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* fylder hele cellens højde i grid'et */
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  /* Billedet fylder bredden af sin container */
+  .flex_col img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  /* Tekst, der skal fylde resten af højden */
+  .flex_col h2,
+  .flex_col h3,
+  .flex_col p {
+    margin: 5px 0;
+  }
+
+  .flex_col p {
+    flex: 1; /* tillader teksten at vokse og fylde pladsen */
+    overflow: auto; /* hvis teksten er for lang */
+  }
+
+  .span_2x2 {
+    grid-row: span 2;
+    grid-column: span 2;
+    gap: 1em;
+  }
+  .span_1x2 {
+    grid-row: span 1;
+    grid-column: span 2;
+    gap: 1em;
+  }
+  .span_1x1 {
+    grid-row: span 1;
+    grid-column: span 1;
+    gap: 1em;
+  }
+  .span_1x3 {
+    grid-row: span 1;
+    grid-column: span 3;
+  }
+  figure {
+    margin: 0px;
+    padding: 0px;
+  }
+}
